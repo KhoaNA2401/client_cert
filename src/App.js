@@ -11,16 +11,6 @@ function App() {
     <div className="App">
       <Router>
         <ResponsiveAppBar />
-
-        {/* <Route path="/" >
-          <Intro />
-        </Route>
-        <Route path="/verify" >
-          <FormVerifyCert/>
-        </Route>
-        <Route path="/find" >
-          <FormFindCert/>
-        </Route> */}
         <Route
           path="/"
           exact

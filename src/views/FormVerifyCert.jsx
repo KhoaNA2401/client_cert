@@ -11,6 +11,7 @@ import { Card, Fab, Grid, Icon, lighten, styled, useTheme } from '@mui/material'
 import { useState, useEffect } from "react";
 import { db } from '../utils/utils/firebase-config'
 import { collection, getDocs, query, updateDoc, doc, where, onSnapshot } from "firebase/firestore";
+import SearchIcon from '@mui/icons-material/Search';
 export default function FormVerifyCert() {
     const [open, setOpen] = React.useState(false);
     const [certificates, setCertificates] = useState([]);
@@ -53,7 +54,7 @@ export default function FormVerifyCert() {
             />
             <Box width="100%" overflow="auto" style={{ marginTop: "1em"}}>
                 <Button disabled={!isEnable} variant="outlined" color="primary" onClick={getTransaction}>
-                    Find Transaction
+                    Find Transaction <SearchIcon></SearchIcon>
                 </Button>
             </Box>
 

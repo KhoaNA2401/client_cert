@@ -34,7 +34,7 @@ function ResponsiveAppBar() {
   };
 
   return (
-    <AppBar position="static">
+    <AppBar position="static" style={{background:"#0A1929"}}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <CheckIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
