@@ -30,7 +30,7 @@ import {
     useTheme,
 } from "@mui/material";
 import { useState, useEffect } from "react";
-import { db } from "../utils/utils/firebase-config";
+import { db } from "../utils/firebase-config";
 import {
     collection,
     getDocs,

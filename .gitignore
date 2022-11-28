@@ -7,10 +7,11 @@
 
 # testing
 /coverage
-
+.env
+utils
 # production
 /build
-utils
+./src/utils
 # misc
 .DS_Store
 .env.local
