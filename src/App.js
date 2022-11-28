@@ -1,23 +1,45 @@
 import logo from './logo.svg';
 import './App.css';
+import FormVerifyCert from './views/FormVerifyCert';
+import ResponsiveAppBar from './views/navbar';
+import FormFindCert from './views/FormFindCert';
+import Intro from './views/intro';
+import { BrowserRouter as Router, Route } from "react-router-dom";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Router>
+        <ResponsiveAppBar />
+
+        {/* <Route path="/" >
+          <Intro />
+        </Route>
+        <Route path="/verify" >
+          <FormVerifyCert/>
+        </Route>
+        <Route path="/find" >
+          <FormFindCert/>
+        </Route> */}
+        <Route
+          path="/"
+          exact
+          render={() => <Intro />}
+        />
+        <Route
+          path="/verify"
+          render={() => (
+            <FormVerifyCert />
+          )}
+        />
+        <Route
+          path="/find"
+          render={() => (
+            <FormFindCert />
+          )}
+        />
+      </Router>
+
     </div>
   );
 }
